@@ -22,6 +22,10 @@
                         <li><a href="#">Home</a></li>
                         {{-- @TODO: Quitar esto de aquí --}}
                         <li>Ponemos de momento aquí todas las URLs para enlazar con ellas...</li>
+                        @if (!Auth::guest())
+                            <li>{{ Auth::user()->username }}</li>
+                        @endif
+
                         <li><a href="{{ route('home.upload') }}">Upload</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Portfolio</a></li>

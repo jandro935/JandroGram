@@ -38,16 +38,6 @@ class RegisterController extends Controller
     }
 
     /**
-     * Show the application registration form.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showRegistrationForm()
-    {
-        return view('auth.auth');
-    }
-
-    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
