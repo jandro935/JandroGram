@@ -20,6 +20,7 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'user_avatar' => $faker->imageUrl('100', '100'),
+        'birth_date' => $faker->date(),
         'remember_token' => str_random(10),
     ];
 });

@@ -16,7 +16,8 @@ class UsersTableSeeder extends Seeder
             'username' => 'jandro935',
             'email' => 'alejandro.seisdedos@gft.com',
             'password' => bcrypt('admin'),
-            'user_avatar' => 'http://lorempixel.com/100/100/'
+            'user_avatar' => 'http://lorempixel.com/100/100/',
+            'birth_date' => '1957-05-25',
         ]);
         factory(User::class, 20)->create();
     }
