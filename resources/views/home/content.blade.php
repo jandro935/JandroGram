@@ -1,44 +1,8 @@
 @extends ('home.layout')
 
 @section ('content')
-    <header>
-        <!-- Start Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-full white bootsnav u-BorderLess">
 
-            <div class="container">
-
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="Icon Icon-align-left"></i>
-                    </button>
-                    <a class="navbar-brand" href="./index.html"><img src="assets/imgs/logo.png" class="logo" alt=""></a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav" data-in="zoomIn" data-out="zoomOut">
-                        <li><a href="#">Home</a></li>
-                        {{-- @TODO: Quitar esto de aquí --}}
-                        <li>Ponemos de momento aquí todas las URLs para enlazar con ellas...</li>
-                        @if (!Auth::guest())
-                            <li>{{ Auth::user()->username }}</li>
-                        @endif
-
-                        <li><a href="{{ route('home.upload') }}">Upload</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Shop</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>
-        </nav>
-        <!-- End Navigation -->
-        <div class="clearfix"></div>
-    </header>
-    <!--header end-->
+    @include ('home.partials.header')
 
     <!--banner start-->
     <section class="container ImageBackground ImageBackground--overlay u-height500" data-overlay="2">

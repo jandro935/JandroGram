@@ -14,9 +14,10 @@
 //Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
+// **** Login / register routes ****
 Route::get('enter', function () {
     return view('auth.auth');
-});
+})->name('enter');
 
 Route::post('login', [
     'as' => 'home.login',
@@ -28,7 +29,10 @@ Route::post('register', [
     'uses' => 'Auth\RegisterController@register'
 ]);
 
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// **** Funcs routes ****
 Route::get('upload', [
-    'as' => 'home.upload',
+    'as' => 'upload',
     'uses' => 'HomeController@upload'
 ]);
