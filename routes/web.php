@@ -32,7 +32,6 @@ Route::post('register', [
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // **** Funcs routes ****
-Route::get('upload', [
-    'as' => 'upload',
-    'uses' => 'HomeController@upload'
-]);
+Route::get('upload', function () {
+    return view('home.upload');
+})->name('upload');

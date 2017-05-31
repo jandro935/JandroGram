@@ -22,4 +22,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = ['password', 'remember_token',];
+
+    public function photos()
+    {
+        return $this->hasMany(Photos::class);
+    }
 }
