@@ -34,4 +34,8 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 // **** Funcs routes ****
 Route::get('upload', function () {
     return view('home.upload');
-})->name('upload');
+})->name('upload.get')->middleware('auth');
+
+Route::post('upload', 'HomeController@upload')
+    ->name('upload.post')
+    ->middleware('auth');

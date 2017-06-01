@@ -9,44 +9,21 @@
     </div>
     <div class="container">
         <div class="row u-MarginBottom70">
-            <form>
+            <form method="post" action="{{ route('upload.post') }}" enctype="multipart/form-data" novalidate>
+                {{ csrf_field() }}
+
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control--shadow" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control form-control--shadow" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control form-control--shadow" placeholder="Phone">
+                        <input type="file" class="form-control form-control--shadow" name="image" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <textarea class="form-control form-control--shadow" rows="" placeholder="Message"></textarea>
+                        <textarea class="form-control form-control--shadow" name="description" rows="" placeholder="Description">
+                            {{ old('description') }}
+                        </textarea>
                     </div>
-                    <button type="submit" class="btn btn-gradient btn--alien btn-block">Send Message</button>
-                </div>
-            </form>
-        </div>
-        <div class="row u-MarginBottom100">
-            <form>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" placeholder="Phone">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <textarea class="form-control" rows="" placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-gradient btn--alien btn-block">Send Message</button>
+                    <button type="submit" class="btn btn-gradient btn--alien btn-block">Upload</button>
                 </div>
             </form>
         </div>

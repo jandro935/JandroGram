@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Photos extends Model
 {
-    protected $fillable = ['name', 'description', 'route', 'user_id'];
+    protected $table = 'photos';
+
+    protected $fillable = ['name', 'description', 'user_id'];
 
     public function user()
     {
