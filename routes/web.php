@@ -39,3 +39,7 @@ Route::get('upload', function () {
 Route::post('upload', 'HomeController@upload')
     ->name('upload.post')
     ->middleware('auth');
+
+
+// **** Proof ****
+Route::get('proof', 'HomeController@proof');
