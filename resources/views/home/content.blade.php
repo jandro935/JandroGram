@@ -26,116 +26,20 @@
     <div class="container">
         <div class="row u-MarginTop30">
             <div class="js-Portfolio portfolio-grid portfolio-gallery  grid-2 gutter">
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/01.jpg" class="portfolio-image popup-gallery" title="Blue Eye Girl">
-                        <img src="assets/imgs/photography/01.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Blue Eye Girl</h4>
+
+                @foreach ($photos as $photo)
+                    <div class="portfolio-item">
+                        <a href="/img/ups/{{ $photo->name }}" class="portfolio-image popup-gallery" title="{{ $photo->name }}">
+                            <img src="/img/ups/{{ $photo->name }}" alt="{{ $photo->name }}" />
+                            <div class="portfolio-hover-title">
+                                <div class="portfolio-content">
+                                    <h4>{{ $photo->description }}</h4>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/02.jpg" class="portfolio-image popup-gallery" title="Animal">
-                        <img src="assets/imgs/photography/02.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Animal</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/03.jpg" class="portfolio-image popup-gallery" title="River Alone">
-                        <img src="assets/imgs/photography/03.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>River Alone</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/04.jpg" class="portfolio-image popup-gallery" title="Rare">
-                        <img src="assets/imgs/photography/04.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Rare</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/05.jpg" class="portfolio-image popup-gallery" title="Sea Way">
-                        <img src="assets/imgs/photography/05.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Sea Way</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/06.jpg" class="portfolio-image popup-gallery" title="Man in Dark">
-                        <img src="assets/imgs/photography/06.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Man in Dark</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/07.jpg" class="portfolio-image popup-gallery" title="Teen Girl">
-                        <img src="assets/imgs/photography/07.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Teen Girl</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/08.jpg" class="portfolio-image popup-gallery" title="Old Man Smoking">
-                        <img src="assets/imgs/photography/08.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Old Man Smoking</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/09.jpg" class="portfolio-image popup-gallery" title="Colorful Boy">
-                        <img src="assets/imgs/photography/09.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Colorful Boy</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/10.jpg" class="portfolio-image popup-gallery" title="Cab">
-                        <img src="assets/imgs/photography/10.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Cab</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="assets/imgs/photography/11.jpg" class="portfolio-image popup-gallery" title="Sit &amp; Read">
-                        <img src="assets/imgs/photography/11.jpg" alt=""/>
-                        <div class="portfolio-hover-title">
-                            <div class="portfolio-content">
-                                <h4>Sit &amp; Read</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                @endforeach
+
             </div>
         </div>
 
