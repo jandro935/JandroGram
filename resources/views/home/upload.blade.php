@@ -16,6 +16,15 @@
                     <div class="form-group">
                         <input type="file" class="form-control form-control--shadow" name="image" required>
                     </div>
+
+                    <div class="form-group select-wrapper">
+                        <select class="form-control form-control--light u-Rounded" name="state" required>
+                            <option>Select State</option>
+                            @foreach ($states as $state)
+                                <option value="{{ $state->id }}">{{ $state->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">

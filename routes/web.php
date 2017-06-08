@@ -34,11 +34,12 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // **** Upload routes ****
 
-Route::get('upload', function () {
-    return view('home.upload');
-})->name('upload.get')->middleware('auth');
+Route::get('upload', [
+    'as' => 'upload.index',
+    'uses' => 'UploadController@index'
+])->middleware('auth');
 
-Route::post('upload', 'HomeController@upload')
+Route::post('upload', 'UploadController@upload')
     ->name('upload.post')
     ->middleware('auth');
 

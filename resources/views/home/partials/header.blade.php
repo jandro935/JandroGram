@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav" data-in="" data-out="">
                     <li><a href="{{ route('home') }}" title="Home">Home</a></li>
-                    <li><a href="{{ route('upload.get') }}" title="Upload">Upload</a></li>
+                    <li><a href="{{ route('upload.index') }}" title="Upload">Upload</a></li>
                     <li class="dropdown megamenu-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu</a>
                         <ul class="dropdown-menu megamenu-content" role="menu">
