@@ -14,4 +14,9 @@ class Photos extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function states()
+    {
+        return $this->belongsTo(States::class, 'state_id');
+    }
 }

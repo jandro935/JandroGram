@@ -439,30 +439,7 @@
     </header>
     <!--header end-->
 
-    <!--page title start-->
-    <section class="ImageBackground ImageBackground--gray v-align-parent u-height200 js-minusHeader">
-        <div class="ImageBackground__holder"></div>
-        <div class="v-align-child">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-md-8 col-xs-12">
-                        <h1 class="text-uppercase u-Margin0 u-Weight300">My Account</h1>
-                        <!--<p class="u-LineHeight2 text-muted u-Margin0">This shortcodes are ready to use as well as customize.</p>-->
-                    </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <ol class="breadcrumb u-MarginTop5 u-MarginBottom0 pull-right">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li class="active"><span>Sign In</span></li>
-                        </ol>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--page title end-->
+    <div class="container"></div>
 
     <div class="container u-MarginTop100 u-xs-MarginTop30 u-MarginBottom100 u-xs-MarginBottom30">
         <div class="row">

@@ -15,6 +15,7 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 // **** Login / register routes ****
+
 Route::get('enter', function () {
     return view('auth.auth');
 })->name('enter');
@@ -31,7 +32,8 @@ Route::post('register', [
 
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// **** Funcs routes ****
+// **** Upload routes ****
+
 Route::get('upload', function () {
     return view('home.upload');
 })->name('upload.get')->middleware('auth');
@@ -42,4 +44,5 @@ Route::post('upload', 'HomeController@upload')
 
 
 // **** Proof ****
+
 Route::get('proof', 'HomeController@proof');
